@@ -210,6 +210,16 @@ a:hover, a:active, a:focus {
   margin: 0;
 }
 
+.navbar-default span {
+  color: #777;
+  font-size: 14px;
+  text-transform: none;
+  font-weight: normal;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
 .navbar-default .navbar-nav li a {
     color: #777;
     font-size: 16px;
@@ -297,7 +307,7 @@ a:hover, a:active, a:focus {
 }
 
 .main-contact {
-  background: url('../images/contact-bg.jpg') no-repeat;
+  background: url('../images/Top 40/Portrait/p9.jpg') no-repeat;
 }
 
 #particles-js {
