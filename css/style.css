@@ -290,7 +290,7 @@ a:hover, a:active, a:focus {
 }
 
 .main-home {
-    background: url('../images/Top 40/Landscape/l1.jpg') no-repeat;
+    background: url('../images/Top 20/Landscape/l1.jpg') no-repeat;
     height: 100vh;
 }
 
@@ -307,7 +307,7 @@ a:hover, a:active, a:focus {
 }
 
 .main-contact {
-  background: url('../images/Top 40/Portrait/p9.jpg') no-repeat;
+  background: url('../images/Top 20/Portrait/p9.jpg') no-repeat;
 }
 
 #particles-js {
