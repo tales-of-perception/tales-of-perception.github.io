@@ -343,6 +343,38 @@ a:hover, a:active, a:focus {
   color: #ffffff;
 }
 
+/* CSS to style the video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625) */
+    height: 0;
+  margin-bottom: 32px;
+}
+
+
+
+/* CSS to style the embedded video */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-post-thumb {
+  border-bottom: 1px solid #f0f0f0;
+  padding-top: 32px;
+  padding-bottom: 62px;
+  margin-bottom: 32px;
+}
+
+.blog-post-thumb:last-child {
+  border-bottom: 0px;
+  padding-bottom: 32px;
+  margin-bottom: 0px;
+}
 
 
 /*---------------------------------------
