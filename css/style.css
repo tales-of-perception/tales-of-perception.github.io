@@ -8,7 +8,7 @@ http://www.tooplate.com/view/2085-neuron
 
 body {
 		background: #ffffff;
-    font-family: 'Lora', serif;
+    font-family: 'pf-videotext', serif;
     font-style: normal;
 		font-weight: 300;
     overflow-x: hidden;
@@ -20,7 +20,7 @@ body {
 -----------------------------------------*/
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Merriweather', serif;
+  font-family: 'pf-videotext', serif;
   font-style: normal;
   font-weight: bold;
   letter-spacing: 0.5px;
@@ -203,7 +203,7 @@ a:hover, a:active, a:focus {
 
 .navbar-default .navbar-brand {
   color: #555;
-  font-family: 'Merriweather', serif;
+  font-family: 'pf-videotext', "Times New Roman", serif;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -327,7 +327,7 @@ a:hover, a:active, a:focus {
   border: 2px solid #ffffff;
   border-radius: 100px;
   color: #444;
-  font-family: 'Merriweather', serif;
+  font-family: 'pf-videotext', serif;
   font-size: 10px;
   font-weight: bold;
   letter-spacing: 2px;
