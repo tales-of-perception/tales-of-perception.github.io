@@ -147,11 +147,11 @@ a:hover, a:active, a:focus {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  background: none repeat scroll 0 0 #ffffff;
+  background: none repeat scroll 0 0 #000000;
 }
 
 .sk-spinner-wordpress.sk-spinner {
-  background-color: #bfba55;
+  background-color: #59282f;
   width: 40px;
   height: 40px;
   border-radius: 40px;
@@ -169,6 +169,31 @@ a:hover, a:active, a:focus {
   border-radius: 8px;
   top: 5px;
   left: 5px; 
+}
+
+/* Telephone box */
+.phone-box {
+    width: 70px; /* Adjust size as needed */
+    animation: flash 2s infinite, spin 1s infinite linear; /* Flashing animation */
+}
+
+/* Flashing animation */
+@keyframes flash {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+    }
+    50% {
+        opacity: 0; /* Invisible */
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    100% {
+        transform: rotate(360deg); /* Complete one full rotation */
+    }
 }
 
 @-webkit-keyframes sk-innerCircle {
@@ -290,20 +315,12 @@ a:hover, a:active, a:focus {
 }
 
 .main-home {
-    background: url("../images/Bo'ness_20240324_194224.jpg") no-repeat;
+    background: url("../images/Bo'ness_20240324_194224-cropped.jpg") no-repeat;
     height: 100vh;
 }
 
-.main-about {
-  background: url('../images/about-bg.jpg') no-repeat;
-}
-
-.main-single-post {
-  background: url('../images/single-post-bg.jpg') no-repeat;
-}
-
 .main-gallery {
-  background: url('../images/DSCF6686.jpg') no-repeat;
+  background: url('../images/St_Conans_Kirk_20240825_142003.jpg') no-repeat;
 }
 
 .main-contact {
@@ -352,8 +369,6 @@ a:hover, a:active, a:focus {
   margin-bottom: 32px;
 }
 
-
-
 /* CSS to style the embedded video */
 .video-container iframe {
     position: absolute;
@@ -380,25 +395,19 @@ a:hover, a:active, a:focus {
 /*---------------------------------------
    About section              
 -----------------------------------------*/
-
-#about .col-md-6 {
-  padding-top: 22px;
-  padding-bottom: 32px;
+#about {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    text-align: center;       /* Center text inside the elements */
+    /*min-height: 100vh;        !* Ensure the section takes at least the full viewport height *!*/
 }
 
-#about .col-md-6 img {
-  padding: 22px 0px 22px 22px;
+.responsive-image {
+    width: 100%; /* Makes the image adapt to the screen size */
+    max-width: 300px; /* Ensures the image doesn’t exceed 300px */
+    height: auto; /* Maintains the aspect ratio */
 }
-
-#about .col-md-4 {
-  padding-bottom: 32px;
-}
-
-#about .col-md-4 img {
-  padding-top: 12px;
-}
-
-
 
 /*---------------------------------------
    Gallery section              
@@ -497,6 +506,19 @@ a:hover, a:active, a:focus {
 /*---------------------------------------
    Blog section              
 -----------------------------------------*/
+
+#blog-single-post {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    text-align: center;       /* Center text inside the elements */
+    /*min-height: 100vh;        !* Ensure the section takes at least the full viewport height *!*/
+    line-height: 0.6;
+}
+
+.reduce-space {
+    line-height: 1.2;
+}
 
 .blog-post-thumb {
   border-bottom: 1px solid #f0f0f0;
