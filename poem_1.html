@@ -129,26 +129,21 @@ http://www.tooplate.com/view/2085-neuron
 </section>
 
 <!-- Footer Section -->
+<div id="footer-placeholder"></div>
+   <script>
+       // Load the footer dynamically
+       const loadFooter = async () => {
+           const footerEl = document.getElementById('footer-placeholder');
+           const response = await fetch('footer.html');
+           if (response.ok) {
+               footerEl.innerHTML = await response.text();
+           } else {
+               console.error('Failed to load footer');
+           }
+       };
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <h4 class="social-icon">Thanks for visiting &#10084; <br> See more on my Instagram below.</h4>
-            </div>
-
-            <div class="col-md-12 col-sm-12">
-                <ul class="social-icon">
-                    <li><a href="https://www.instagram.com/matthewtwhelan/" target="_blank" class="fa fa-instagram"></a></li>
-                    <!--<li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-google-plus"></a></li>
-                    <li><a href="#" class="fa fa-dribbble"></a></li>
-                    <li><a href="#" class="fa fa-linkedin"></a></li>-->
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+       loadFooter();
+   </script>
 
 <!-- Back top -->
 <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>

@@ -92,50 +92,22 @@ http://www.tooplate.com/view/2085-neuron
      </div>
 </section>
 
-
-
 <!-- Footer Section -->
+<div id="footer-placeholder"></div>
+   <script>
+       // Load the footer dynamically
+       const loadFooter = async () => {
+           const footerEl = document.getElementById('footer-placeholder');
+           const response = await fetch('footer.html');
+           if (response.ok) {
+               footerEl.innerHTML = await response.text();
+           } else {
+               console.error('Failed to load footer');
+           }
+       };
 
-<footer>
-     <div class="container">
-          <div class="row">
-
-               <!--<div class="col-md-5 col-md-offset-1 col-sm-6">
-                    <h3>Matt's Photoblog</h3>-->
-                    <!--<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>-->
-                    <!--<div class="footer-copyright">
-                         <p>Copyright &copy; 2017 Your Company - Design: Tooplate</p>
-                    </div>-->
-               <!--</div>
-
-               <div class="col-md-4 col-md-offset-1 col-sm-6">
-                    <h3>Talk to us</h3>
-                    <p><i class="fa fa-globe"></i> 512 Delicious Street, San Francisco, CA 10880</p>
-                    <p><i class="fa fa-phone"></i> 010-020-0990</p>
-                    <p><i class="fa fa-save"></i> info@company.com</p>
-               </div>
-
-               <div class="clearfix col-md-12 col-sm-12">
-                    <hr>
-               </div>-->
-
-              <div class="col-md-12 col-sm-12">
-                  <h4 class="social-icon">Thanks for visiting &#10084; <br> For more, see my Instagram below.</h4>
-              </div>
-
-               <div class="col-md-12 col-sm-12">
-                    <ul class="social-icon">
-                         <li><a href="https://www.instagram.com/matthewtwhelan/" target="_blank" class="fa fa-instagram"></a></li>
-                         <!--<li><a href="#" class="fa fa-twitter"></a></li>
-                         <li><a href="#" class="fa fa-google-plus"></a></li>
-                         <li><a href="#" class="fa fa-dribbble"></a></li>
-                         <li><a href="#" class="fa fa-linkedin"></a></li>-->
-                    </ul>
-               </div>
-
-          </div>
-     </div>
-</footer>
+       loadFooter();
+   </script>
 
 <!-- Back top -->
 <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
