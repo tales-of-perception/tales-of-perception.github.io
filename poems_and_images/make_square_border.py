@@ -4,7 +4,11 @@ def add_white_background(image_path, output_path):
     # Open the original image
     img = Image.open(image_path).convert("RGBA")
 
-    # Get original size
+    # Resize with max width or height of 475, keeping aspect ratio
+    max_size = (500, 500)
+    img.thumbnail(max_size, Image.LANCZOS)  # In-place resize
+
+    # Get image size
     width, height = img.size
     max_dim = int(max(width, height) * 1.05)
 
@@ -22,6 +26,22 @@ def add_white_background(image_path, output_path):
     square_bg.save(output_path)
     print(f"Saved: {output_path}")
 
-image_name = "poem_7.jpg"
-# Example usage
-add_white_background(image_name, image_name[:-4] + "_white_border.jpg")
+# image_name = "poem_7.jpg"
+# # Example usage
+# add_white_background(image_name, image_name[:-4] + "_white_border.jpg")
+
+for image_name in [
+    "poem_1.png",
+    "poem_2.png",
+    "poem_3.png",
+    "poem_4.png",
+    "poem_5.png",
+    "poem_6.png"]:
+    # Open the original image
+    img = Image.open(image_name).convert("RGBA")
+
+    # Resize with max width or height of 500, keeping aspect ratio
+    max_size = (500, 500)
+    img.thumbnail(max_size, Image.LANCZOS)  # In-place resize
+
+    img.save(image_name)

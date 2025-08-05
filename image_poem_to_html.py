@@ -12,7 +12,8 @@ markdown_file = "poems_and_images/" + poem_name + ".md"
 if os.path.isfile("poems_and_images/" + poem_name + ".jpg"):
     image_path = "poems_and_images/" + poem_name + ".jpg"
 else:
-    image_path = "poems_and_images/" + poem_name + ".png"
+    print("Cannot find poem image. Make sure it exists, and that it is in jpg file format.")
+    os._exit(1)
 
 def read_markdown(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -66,15 +67,19 @@ def add_white_background(image_path, output_path):
     # Open the original image
     img = Image.open(image_path).convert("RGBA")
 
-    # Get original size
+    # Resize with max width or height of 475, keeping aspect ratio
+    max_size = (500, 500)
+    img.thumbnail(max_size, Image.LANCZOS)  # In-place resize
+
+    # Get image size
     width, height = img.size
-    max_dim = int(max(width, height) * 1.05)
+    max_dim = int(max(width, height)*1.05)
 
     # Create a white background image (square)
     square_bg = Image.new("RGB", (max_dim, max_dim), (255, 255, 255))
 
     # Calculate top-left position to paste the original image
-    x_offset = (max_dim + 100 - width) // 2
+    x_offset = (max_dim - width) // 2
     y_offset = (max_dim - height) // 2
 
     # Paste image onto the center of white background
@@ -85,3 +90,12 @@ def add_white_background(image_path, output_path):
     print(f"Saved: {output_path}")
 
 add_white_background(image_path, image_path[:-4] + "_white_border.jpg")
+
+# Resize original image to have a max height or width of 750px
+
+# Open the original image (make sure original image is jpg format
+img = Image.open(image_path)
+max_size = (750, 750)
+img.thumbnail(max_size, Image.LANCZOS)  # In-place resize
+
+img.save(image_path)
