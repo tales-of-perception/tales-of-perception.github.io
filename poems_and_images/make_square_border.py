@@ -16,7 +16,7 @@ def add_white_background(image_path, output_path):
     square_bg = Image.new("RGB", (max_dim, max_dim), (255, 255, 255))
 
     # Calculate top-left position to paste the original image
-    x_offset = (max_dim + 100 - width) // 2
+    x_offset = (max_dim - width) // 2
     y_offset = (max_dim - height) // 2
 
     # Paste image onto the center of white background
@@ -31,12 +31,12 @@ def add_white_background(image_path, output_path):
 # add_white_background(image_name, image_name[:-4] + "_white_border.jpg")
 
 for image_name in [
-    "poem_1.png",
-    "poem_2.png",
-    "poem_3.png",
-    "poem_4.png",
-    "poem_5.png",
-    "poem_6.png"]:
+    "poem_12.jpg",
+    "poem_13.jpg",
+    "poem_14.jpg",]:
+    
+    add_white_background(image_name, image_name[:-4] + "_white_border.jpg")
+    
     # Open the original image
     img = Image.open(image_name).convert("RGBA")
 
@@ -44,4 +44,5 @@ for image_name in [
     max_size = (500, 500)
     img.thumbnail(max_size, Image.LANCZOS)  # In-place resize
 
-    img.save(image_name)
+    img.save(image_name[:-4] + "_resized.png")
+

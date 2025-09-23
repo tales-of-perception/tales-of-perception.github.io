@@ -5,7 +5,7 @@
 import os
 from PIL import Image
 
-poem_name = "Hold me"
+poem_name = "Tongue twister 2"
 markdown_file = "poems_and_images/" + poem_name + ".md"
 
 # Check if image is jpg or png format
@@ -25,7 +25,7 @@ html_text = f"""
    <div class="blog-post-title">
        <h3 class="neuropol">{poem_name}</h3>
    </div>
-   <img src="{image_path}" class="img-responsive">
+   <img src="{image_path[:-4] + "_resized.jpg"}" class="img-responsive">
    <h3 class="neuropol" style="font-style: italic; font-size: 10px">X</h3>\n
 """
 
@@ -98,4 +98,4 @@ img = Image.open(image_path)
 max_size = (750, 750)
 img.thumbnail(max_size, Image.LANCZOS)  # In-place resize
 
-img.save(image_path)
+img.save(image_path[:-4] + "_resized.jpg")
