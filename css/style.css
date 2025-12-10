@@ -263,6 +263,11 @@ a:hover, a:active, a:focus {
   margin: 0;
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center;  /* vertical centering */
+}
+
 .navbar-default span {
   color: #777;
   font-size: 14px;
