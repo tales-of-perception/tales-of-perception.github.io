@@ -56,7 +56,7 @@ for para in paragraphs:
 html_text += """
     <h3 class="neuropol" style="font-style: italic; font-size: 10px">X</h3>
        <p style="text-align: center; font-size: 20px; margin-top: 30px;" class="neuropol">
-           <a href="glitched_memories.html">Back to Gallery</a>
+           <a href="memory.html">Back to Gallery</a>
        </p>
 </div>
 """
