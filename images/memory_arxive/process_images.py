@@ -8,7 +8,7 @@ def add_white_background(image_path, output_path):
     # Open the original image
     img = Image.open(image_path).convert("RGBA")
 
-    # Resize with max width or height of 475, keeping aspect ratio
+    # Resize with max width or height of 500, keeping aspect ratio
     max_size = (500, 500)
     img.thumbnail(max_size, Image.LANCZOS)  # In-place resize
 
