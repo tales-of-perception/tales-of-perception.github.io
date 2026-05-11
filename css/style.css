@@ -361,7 +361,16 @@ a:hover, a:active, a:focus {
     padding-top: 60px;
     /* padding-bottom: 60px; */
     background-size: cover;
-    background-position: center center;
+}
+
+.main-artistic-process {
+    background: url("../images/Dunfermline_20250510_202109-2-2.jpg") no-repeat;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-size: cover;
+    background-position: center center !important;
     background-repeat: no-repeat;
 }
 
