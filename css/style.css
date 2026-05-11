@@ -356,7 +356,10 @@ a:hover, a:active, a:focus {
 
 .main-home {
     background: url("../images/Dunfermline_20250510_202109-2-2.jpg") no-repeat;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .main-gallery {
