@@ -42,9 +42,9 @@ for file in os.listdir(script_dir):
     if file.endswith('.jpg') and not file.endswith('_white_border.jpg') and not file.endswith('_resized.jpg'):
         add_white_background(script_dir + "/" + file, script_dir + "/" + file[:-4] + "_white_border.jpg")
 
-        # Resize original image to have a max height or width of 750px
+        # Resize original image to have a max height or width of 2000px
         img = Image.open(script_dir + "/" + file)
-        max_size = (750, 750)
+        max_size = (2000, 2000)
         img.thumbnail(max_size, Image.LANCZOS)  # In-place resize
         img.save(script_dir + "/" + file[:-4] + "_resized.jpg")
 
