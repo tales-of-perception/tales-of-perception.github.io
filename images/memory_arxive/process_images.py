@@ -33,6 +33,11 @@ def add_white_background(image_path, output_path):
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 for file in os.listdir(script_dir):
+    if file.endswith('.png'):
+        im = Image.open(script_dir + "/" + file)
+        rgb_im = im.convert('RGB')
+        rgb_im.save(script_dir + "/" + file[:-4] + ".jpg", "JPEG")
+for file in os.listdir(script_dir):    
     if file.endswith('.jpg') and not file.endswith('_white_border.jpg') and not file.endswith('_resized.jpg'):
         add_white_background(script_dir + "/" + file, script_dir + "/" + file[:-4] + "_white_border.jpg")
 
