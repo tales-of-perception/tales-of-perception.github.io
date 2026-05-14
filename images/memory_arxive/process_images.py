@@ -37,6 +37,7 @@ for file in os.listdir(script_dir):
         im = Image.open(script_dir + "/" + file)
         rgb_im = im.convert('RGB')
         rgb_im.save(script_dir + "/" + file[:-4] + ".jpg", "JPEG")
+        os.remove(script_dir + "/" + file)  # Remove original PNG file
 for file in os.listdir(script_dir):    
     if file.endswith('.jpg') and not file.endswith('_white_border.jpg') and not file.endswith('_resized.jpg'):
         add_white_background(script_dir + "/" + file, script_dir + "/" + file[:-4] + "_white_border.jpg")
