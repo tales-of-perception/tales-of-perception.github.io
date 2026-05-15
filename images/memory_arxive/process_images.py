@@ -14,7 +14,7 @@ def add_white_background(image_path, output_path):
 
     # Get image size
     width, height = img.size
-    max_dim = int(max(width, height)*1.05)
+    max_dim = int(max(width, height)*1.00)  # Add 0% border (can adjust as needed, if you want a larger border, increase the multiplier, e.g., 1.10 for 10% border)
 
     # Create a white background image (square)
     square_bg = Image.new("RGB", (max_dim, max_dim), (255, 255, 255))
