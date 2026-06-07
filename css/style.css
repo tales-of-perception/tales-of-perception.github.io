@@ -374,6 +374,17 @@ a:hover, a:active, a:focus {
     background-repeat: no-repeat;
 }
 
+.main-amtix {
+    background: url("../images/Edinburgh_20240215_220308.jpg") no-repeat;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-size: cover;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+}
+
 .main-gallery {
   background: url('../images/Dunfermline_20240812_213422.jpg') no-repeat;
 }
